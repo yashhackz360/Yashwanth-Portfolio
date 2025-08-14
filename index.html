@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Yashwanth's Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Yashwanth's <span>Portfolio</span></a>
+            <div class="nav-links">
+                <a href="#hero" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hi, I am</span>
+                    </div>
+                    <h1 class="hero-name">
+                        <span class="name-part" data-text="Yashwanth">Yashwanth</span>
+                        <span class="name-part" data-text="Sai">Sai</span>
+                        <span class="name-part" data-text="Kasarabada">Kasarabada</span>
+                    </h1>
+                    <div class="hero-job-title">
+                        <span class="job-text">Aspiring </span>
+                         <span class="animated-text">
+                            <span class="text-slide">DATA SCIENTIST</span>
+                            <span class="text-slide">DATA ANALYST</span>
+                            <span class="text-slide">ML ENGINEER</span>
+                            <span class="text-slide">AI ENGINEER</span>
+                        </span>
+                    </div>
+                    <p class="hero-tagline">
+                        <span class="tagline-word">" Transforming</span>
+                        <span class="tagline-word">raw</span>
+                        <span class="tagline-word">data</span>
+                        <span class="tagline-word">into</span>
+                        <span class="tagline-word">meaningful</span>
+                        <span class="tagline-word">insights</span>
+                        <span class="tagline-word">through</span>
+                        <span class="tagline-word">innovative</span>
+                        <span class="tagline-word">analytics</span>
+                        <span class="tagline-word">and</span>
+                        <span class="tagline-word">cutting-edge</span>
+                        <span class="tagline-word">technology! "</span>
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="https://drive.google.com/file/d/1HBUwROZCLoFIho_O-2gcLnsMQo9HtUVq/view?usp=drive_link" class="btn btn-primary" target="_blank" rel="noopener">
+                            <span class="btn-text">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>View Resume</span>
+                            </span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span class="btn-text">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Contact Me</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-icon" style="--delay: 0s; --duration: 6s;">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 2s; --duration: 8s;">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 4s; --duration: 7s;">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 1s; --duration: 9s;">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 3s; --duration: 6.5s;">
+                <i class="fas fa-code"></i>
+            </div>
+        </div>
+        <div class="scroll-down-indicator" id="scrollIndicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-image-section">
+                        <div class="about-image-placeholder">
+                            <img src="assets/images/yash.jpg" alt="About Yashwanth" loading="lazy">
+                        </div>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Multiple successful internships in data domain</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Led end-to-end data projects from conception to deployment</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Specialized in ML, Data Engineering, and Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I'm a passionate data professional currently pursuing my B.Tech in Computer Science with specialization in AI & Data Science at IIIT Manipur. My journey in the world of data began with a curiosity about how numbers can tell compelling stories and drive meaningful business decisions.
+                        </p>
+                        <p>
+                            With multiple internships spanning Data Engineering, Data Science, and Analytics, I've developed a comprehensive skill set that bridges the gap between technical implementation and business value. My experience includes building cloud-native data infrastructures, developing machine learning pipelines, and creating interactive dashboards that transform complex data into actionable insights.
+                        </p>
+                        <p>
+                            My approach combines rigorous analytical thinking with creative problem-solving. I'm particularly passionate about leveraging modern data technologies like Apache Spark, cloud platforms (AWS, GCP), and machine learning frameworks to solve real-world challenges. Whether it's building semantic search engines, developing predictive models, or creating comprehensive data visualization platforms, I thrive on projects that make a tangible impact.
+                        </p>
+                        <p>
+                            Beyond technical skills, I believe in the power of collaboration and continuous learning. I actively contribute to open-source projects, stay updated with the latest industry trends, and enjoy sharing knowledge with the data science community. My goal is to become a well-rounded data professional who can lead data-driven initiatives and mentor the next generation of data enthusiasts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-carousel">
+                <button class="carousel-nav prev" aria-label="Previous experience">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-container">
+                    <!-- Data Engineering Intern -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Data Engineering Intern</h3>
+                            <h4>HiFX IT & Media Services Pvt. Ltd.</h4>
+                            <div class="card-date">May 2025 – Jul 2025</div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Developed a Proof of Concept to modernize the data infrastructure</li>
+                                <li><i class="fas fa-check-circle"></i> Explored a weather dataset using lakehouse setup</li>
+                                <li><i class="fas fa-check-circle"></i> Built secure RESTful APIs with Flask and JWT</li>
+                                <li><i class="fas fa-check-circle"></i> Created AI-powered semantic search engine</li>
+                            </ul>
+                        </div>
+                        <div class="card-tech">
+                            <span class="tech-tag">Apache Spark</span>
+                            <span class="tech-tag">MinIO</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Pinecone</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Science Intern -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Data Science Intern</h3>
+                            <h4>Celebal Technologies</h4>
+                            <div class="card-date">May 2025 – Jul 2025</div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Built house price prediction pipeline</li>
+                                <li><i class="fas fa-check-circle"></i> Conducted EDA using Pandas and Seaborn</li>
+                                <li><i class="fas fa-check-circle"></i> Deployed ML models as Streamlit web apps</li>
+                                <li><i class="fas fa-check-circle"></i> Created RAG chatbot with FAISS</li>
+                            </ul>
+                        </div>
+                        <div class="card-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Hugging Face</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Infosys Springboard -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3>Data Analyst Intern</h3>
+                            <h4>Infosys Springboard</h4>
+                            <div class="card-date">Nov 2024 – Feb 2025</div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Spearheaded IndiaCityGDP visualization</li>
+                                <li><i class="fas fa-check-circle"></i> Constructed interactive dashboards</li>
+                                <li><i class="fas fa-check-circle"></i> Acquired and refined 100,000+ data points</li>
+                                <li><i class="fas fa-check-circle"></i> Designed AI chatbot for user queries</li>
+                            </ul>
+                        </div>
+                        <div class="card-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav next" aria-label="Next experience">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>B.Tech in CSE (AI & DS)</h3>
+                    <h4>Indian Institute of Information Technology Manipur (IIIT Manipur)</h4>
+                    <p>Currently pursuing with a CGPA of 6.44 (Till 6th Semester)</p>
+                    <div class="education-meta">
+                        <span>2022 - 2026</span>
+                        <span>Imphal, India</span>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <h3>Intermediate (12th Grade)</h3>
+                    <h4>Jupiter Junior College (APBSE)</h4>
+                    <p>Percentage: 84%</p>
+                    <div class="education-meta">
+                        <span>2020 - 2022</span>
+                        <span>Andhra Pradesh, India</span>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <h3>High School (10th Grade)</h3>
+                    <h4>Little Flower English Medium School (ICSE)</h4>
+                    <p>Percentage: 82%</p>
+                    <div class="education-meta">
+                        <span>2010 - 2020</span>
+                        <span>Andhra Pradesh, India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Semantic Search Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Semantic Search with Pinecone Vector DB</h3>
+                        <div class="project-meta">
+                            <span>Jul 2025</span>
+                            <span>Personal Project</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Sentence Transformers</span>
+                            <span class="tech-tag">Pinecone</span>
+                            <span class="tech-tag">Hugging Face</span>
+                        </div>
+                        <p>
+                            A scalable semantic search system leveraging vector embeddings for intelligent information retrieval,
+                            combining multiple search techniques for optimal results.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/yashhackz360/Semantic_Search_pinecone_vector_db" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="#" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Railway Accident Analytics: A Data-Driven Approach</h3>
+                        <div class="project-meta">
+                            <span>Mar 2025</span>
+                            <span>Guided by Dr. Sanasam Chanu Inunganbi</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <p>
+                            A comprehensive analysis platform for railway accident data with visualization dashboards 
+                            and predictive modeling capabilities.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/yashhackz360/Railway_Accdeint_Analytics_A_data_driven_AI_Approach" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://railwayaccdeintanalyticsadatadrivenaiapproach-9fz3vruweruzsp2a.streamlit.app/" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="skills-hero">
+                <h2>Skills & Expertise</h2>
+                <p>A comprehensive toolkit spanning data science, machine learning, cloud technologies, and modern development frameworks</p>
+            </div>
+            
+            <div class="skills-main-container">
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-item" data-skill="python">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-name">Python</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="sql">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-name">SQL</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="r">
+                        <div class="skill-icon">
+                            <i class="fab fa-r-project"></i>
+                        </div>
+                        <div class="skill-name">R</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="cpp">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="skill-name">C/C++</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="bash">
+                        <div class="skill-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="skill-name">Bash</div>
+                    </div>
+                    
+                    <!-- Machine Learning & AI -->
+                    <div class="skill-item" data-skill="sklearn">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="skill-name">Scikit-Learn</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="tensorflow">
+                        <div class="skill-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="skill-name">TensorFlow</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="pytorch">
+                        <div class="skill-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="skill-name">PyTorch</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="nlp">
+                        <div class="skill-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="skill-name">NLP</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="huggingface">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="skill-name">Hugging Face</div>
+                    </div>
+                    
+                    <!-- Cloud & Data Engineering -->
+                    <div class="skill-item" data-skill="aws">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="skill-name">AWS</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="gcp">
+                        <div class="skill-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="skill-name">GCP</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="spark">
+                        <div class="skill-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="skill-name">Apache Spark</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="docker">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="skill-name">Docker</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="airflow">
+                        <div class="skill-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="skill-name">Airflow</div>
+                    </div>
+                    
+                    <!-- Data Analytics -->
+                    <div class="skill-item" data-skill="pandas">
+                        <div class="skill-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <div class="skill-name">Pandas</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="numpy">
+                        <div class="skill-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="skill-name">NumPy</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="matplotlib">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="skill-name">Matplotlib</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="seaborn">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-area"></i>
+                        </div>
+                        <div class="skill-name">Seaborn</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="powerbi">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="skill-name">Power BI</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="excel">
+                        <div class="skill-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="skill-name">Excel</div>
+                    </div>
+                    
+                    <!-- Development Tools -->
+                    <div class="skill-item" data-skill="git">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="skill-name">Git</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="streamlit">
+                        <div class="skill-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="skill-name">Streamlit</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="flask">
+                        <div class="skill-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="skill-name">Flask</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="fastapi">
+                        <div class="skill-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="skill-name">FastAPI</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="jwt">
+                        <div class="skill-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="skill-name">JWT</div>
+                    </div>
+                    
+                    <!-- Operating Systems -->
+                    <div class="skill-item" data-skill="linux">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <div class="skill-name">Linux</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="windows">
+                        <div class="skill-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <div class="skill-name">Windows</div>
+                    </div>
+                    
+                    <div class="skill-item" data-skill="macos">
+                        <div class="skill-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="skill-name">macOS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:yashwanthkasarabada2003@gmail.com">yashwanthsaikasarabada@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+91**********">+91 **********</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Guntur, Andhra Pradesh, India</span>
+                    </div>
+                    <h3>Follow Me</h3>
+                    <div class="contact-social-links">
+                        <a href="https://github.com/yashhackz360" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yashwanth-kasarabada-ba4265258/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yashwanth Sai Kasarabada. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
