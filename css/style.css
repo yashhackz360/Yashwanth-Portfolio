@@ -160,12 +160,20 @@ section {
     padding: clamp(4rem, 7vw, 7rem) 0;
     position: relative;
     scroll-margin-top: calc(var(--header-height-desktop) + 8px);
+    min-height: calc(100vh - var(--header-height-desktop));
+    display: flex;
+    align-items: center;
+}
+
+section > .container {
+    width: 100%;
 }
 
 @media (max-width: 1023px) {
     section {
         scroll-margin-top: calc(var(--header-height-mobile) + 8px);
         padding: clamp(3rem, 5vw, 5rem) 0;
+        min-height: calc(100vh - var(--header-height-mobile));
     }
 }
 
