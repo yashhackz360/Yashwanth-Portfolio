@@ -67,7 +67,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height-desktop);
+    scroll-padding-top: calc(var(--header-height-desktop) + 8px);
     font-size: 100%;
     /* Force consistent font rendering */
     -webkit-text-size-adjust: 100%;
@@ -157,15 +157,15 @@ a {
 }
 
 section {
-    padding: clamp(5rem, 8vw, 9rem) 0;
+    padding: clamp(4rem, 7vw, 7rem) 0;
     position: relative;
-    scroll-margin-top: var(--header-height-desktop);
+    scroll-margin-top: calc(var(--header-height-desktop) + 8px);
 }
 
 @media (max-width: 1023px) {
     section {
-        scroll-margin-top: var(--header-height-mobile);
-        padding: clamp(3.5rem, 6vw, 6rem) 0;
+        scroll-margin-top: calc(var(--header-height-mobile) + 8px);
+        padding: clamp(3rem, 5vw, 5rem) 0;
     }
 }
 

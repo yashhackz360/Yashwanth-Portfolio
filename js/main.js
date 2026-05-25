@@ -24,12 +24,12 @@ const navItems = document.querySelectorAll('.nav-links a');
 
 function highlightNavItem() {
     let current = '';
+    const headerOffset = document.querySelector('header').offsetHeight + 16;
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         
-        if (window.scrollY >= (sectionTop - 150)) {
+        if (window.scrollY >= (sectionTop - headerOffset)) {
             current = section.getAttribute('id');
         }
     });
@@ -42,20 +42,20 @@ function highlightNavItem() {
     });
 }
 
-// Smooth scrolling for all links
+// Smooth scrolling for all links — uses native scrollIntoView to respect CSS scroll-margin-top
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+        if (targetId === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
-                behavior: 'smooth'
-            });
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
