@@ -276,45 +276,20 @@ if (contactForm) {
     });
 }
 
-// Animation on scroll
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('section:not(#hero), .experience-card, .project-card, .education-card, .skills-category');
-    
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
-        
-        if (elementPosition < screenPosition) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-            
-            if (element.classList.contains('skills-category')) {
-                const skillBars = element.querySelectorAll('.skill-progress');
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
-                });
-            }
+// IntersectionObserver scroll reveal
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
     });
-};
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
-// Set initial state for animations
-document.querySelectorAll('section:not(#hero), .experience-card, .project-card, .education-card, .skills-category').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // Scroll event handlers
-window.addEventListener('scroll', () => {
-    highlightNavItem();
-    animateOnScroll();
-});
+window.addEventListener('scroll', highlightNavItem, { passive: true });
 
-// Initial calls
+// Initial call
 highlightNavItem();
-animateOnScroll();
