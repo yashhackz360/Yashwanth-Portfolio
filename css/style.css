@@ -152,7 +152,7 @@ p {
 a {
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Layout - Enhanced with better centering */
@@ -249,9 +249,14 @@ header {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     height: var(--header-height-desktop);
     border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+header.scrolled {
+    background-color: rgba(15, 23, 42, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 1023px) {
@@ -298,7 +303,7 @@ nav {
         gap: var(--space-3);
         transform: translateY(-100%);
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
     }
     
@@ -316,7 +321,7 @@ nav {
     padding: 6px 14px;
     font-size: var(--font-size-small);
     border-radius: 20px;
-    transition: all 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.01em;
 }
 
@@ -342,7 +347,7 @@ nav {
     height: 2px;
     background: var(--primary);
     border-radius: 2px;
-    transition: width 0.3s ease;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links a:hover::after,
@@ -360,7 +365,7 @@ nav {
     z-index: 1001;
     padding: var(--space-2);
     border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (max-width: 1023px) {
@@ -625,7 +630,7 @@ nav {
 .tagline-word:hover {
     color: var(--primary);
     transform: translateY(-2px) scale(1.05);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
 }
 
@@ -843,7 +848,7 @@ nav {
     background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(102, 126, 234, 0.05) 100%);
     border-radius: 10px;
     border: 1px solid rgba(56, 189, 248, 0.2);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .highlight-item:hover {
@@ -930,7 +935,7 @@ nav {
     border-radius: 18px;
     padding: 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(56, 189, 248, 0.12);
     min-width: 300px;
     overflow: hidden;
@@ -1151,7 +1156,7 @@ nav {
     border-radius: 18px;
     padding: 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(56, 189, 248, 0.1);
     overflow: hidden;
     display: flex;
@@ -1238,7 +1243,7 @@ nav {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(56, 189, 248, 0.1);
@@ -1254,7 +1259,7 @@ nav {
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(56, 189, 248, 0.1);
@@ -1425,7 +1430,7 @@ nav {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 8px;
-    transition: all 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
 }
 
@@ -1523,7 +1528,7 @@ nav {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(56, 189, 248, 0.1) 100%);
     border-radius: 50%;
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1538,7 +1543,7 @@ nav {
     color: white;
     font-family: inherit;
     font-size: 0.95rem;
-    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form input:focus,
@@ -1547,6 +1552,7 @@ nav {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+    transform: translateY(-1px);
 }
 
 .contact-form input::placeholder,
@@ -1572,7 +1578,7 @@ nav {
     font-family: inherit;
     font-size: 0.95rem;
     letter-spacing: 0.03em;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1636,8 +1642,8 @@ footer p {
 /* ── Scroll Reveal ──────────────────────────────────── */
 .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.visible {
@@ -1689,7 +1695,7 @@ section:not(#hero):not(#particles-js) {
     align-items: center;
     opacity: 0.7;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     animation: scrollBounce 2s infinite;
 }
 
@@ -1805,7 +1811,7 @@ section:not(#hero):not(#particles-js) {
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .nav-links.active {

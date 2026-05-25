@@ -288,8 +288,23 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Scroll event handlers
-window.addEventListener('scroll', highlightNavItem, { passive: true });
+// Scroll event handlers & header effect
+const header = document.querySelector('header');
+const scrollIndicator = document.getElementById('scrollIndicator');
 
-// Initial call
-highlightNavItem();
+function handleScroll() {
+    highlightNavItem();
+    
+    // Header scroll effect
+    if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    }
+    
+    // Hide scroll indicator after scrolling
+    if (scrollIndicator) {
+        scrollIndicator.classList.toggle('hidden', window.scrollY > 100);
+    }
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
+handleScroll();
