@@ -277,9 +277,8 @@ header.scrolled {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-inline: clamp(1rem, 4vw, 2.5rem);
-    max-width: var(--container-max);
-    margin-inline: auto;
+    width: 100%;
+    padding-inline: clamp(1.25rem, 5vw, 3rem);
 }
 
 /* Logo */
@@ -568,7 +567,7 @@ header.scrolled {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: rgba(11, 17, 32, 0.55);
+    background: rgba(11, 17, 32, 0.78);
     pointer-events: none;
 }
 
