@@ -64,7 +64,8 @@
     <!-- HERO SECTION                               -->
     <!-- ═══════════════════════════════════════════ -->
     <section id="hero">
-        <div class="hero-center container">
+        <div class="hero-grid container">
+            <!-- Left column: Text + CTA -->
             <div class="hero-text">
                 <div class="hero-greeting reveal-fast">
                     <span class="greeting-text">Hi, I am</span>
@@ -96,6 +97,32 @@
                     <a href="#contact" class="btn btn-outline">
                         <span class="btn-inner"><i class="fas fa-paper-plane"></i><span>Contact Me</span></span>
                     </a>
+                </div>
+            </div>
+
+            <!-- Right column: Animated SVG Data Illustration -->
+            <div class="hero-illustration" aria-hidden="true">
+                <div class="hex-grid">
+                    <div class="hex-ring hex-ring--1"></div>
+                    <div class="hex-ring hex-ring--2"></div>
+                    <div class="hex-ring hex-ring--3"></div>
+                    <div class="hex-center">
+                        <i class="fas fa-database hex-core-icon"></i>
+                    </div>
+                    <!-- Orbiting icons -->
+                    <div class="orbit-icon orbit-icon--1" style="--orbit-delay:0s"><i class="fas fa-chart-line"></i></div>
+                    <div class="orbit-icon orbit-icon--2" style="--orbit-delay:1.5s"><i class="fas fa-brain"></i></div>
+                    <div class="orbit-icon orbit-icon--3" style="--orbit-delay:3s"><i class="fas fa-robot"></i></div>
+                    <div class="orbit-icon orbit-icon--4" style="--orbit-delay:4.5s"><i class="fas fa-code"></i></div>
+                    <div class="orbit-icon orbit-icon--5" style="--orbit-delay:6s"><i class="fas fa-server"></i></div>
+                </div>
+                <!-- Floating data nodes -->
+                <div class="data-nodes">
+                    <div class="data-node" style="--dn-x:70%;--dn-y:15%;--dn-dur:6s;--dn-del:0s"></div>
+                    <div class="data-node" style="--dn-x:20%;--dn-y:70%;--dn-dur:8s;--dn-del:1s"></div>
+                    <div class="data-node" style="--dn-x:80%;--dn-y:65%;--dn-dur:7s;--dn-del:2s"></div>
+                    <div class="data-node" style="--dn-x:10%;--dn-y:30%;--dn-dur:9s;--dn-del:0.5s"></div>
+                    <div class="data-node data-node--lg" style="--dn-x:60%;--dn-y:80%;--dn-dur:5s;--dn-del:1.5s"></div>
                 </div>
             </div>
         </div>
