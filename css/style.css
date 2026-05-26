@@ -120,7 +120,8 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0b1120 0%, #0f172a 50%, #1e293b 100%);
+    background: url('../assets/images/bg.png') center center / cover no-repeat fixed;
+    background-color: #0b1120;
     color: var(--text-primary);
     line-height: 1.7;
     overflow-x: hidden;
@@ -557,6 +558,18 @@ header.scrolled {
     padding-bottom: 0;
     display: flex;
     align-items: center;
+    position: relative;
+    background: transparent;
+}
+
+/* Dark overlay — keeps text readable over background image */
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(11, 17, 32, 0.55);
+    pointer-events: none;
 }
 
 .hero-grid {
@@ -565,6 +578,8 @@ header.scrolled {
     gap: 3rem;
     align-items: center;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 900px) {
@@ -2153,4 +2168,60 @@ footer p {
 @media (hover: none) {
     .btn:active           { transform: scale(0.97); }
     .project-card:active  { transform: translateY(-3px); }
+}
+
+/* ============================================================
+   HERO SPECIALIZATION PILLS
+   ============================================================ */
+.hero-specialization {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.65s 1.25s ease forwards;
+}
+
+.spec-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    font-size: clamp(0.72rem, 1.3vw, 0.85rem);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid;
+    white-space: nowrap;
+    transition: filter var(--t-base), transform var(--t-base);
+}
+
+.spec-pill:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+.spec-pill i {
+    font-size: 0.8em;
+    opacity: 0.85;
+}
+
+.spec-pill--ai {
+    background: rgba(56, 189, 248, 0.09);
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+}
+
+.spec-pill--data {
+    background: rgba(102, 126, 234, 0.09);
+    border-color: rgba(102, 126, 234, 0.3);
+    color: #667eea;
+}
+
+.spec-dot {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.7rem;
+    line-height: 1;
+    user-select: none;
 }
