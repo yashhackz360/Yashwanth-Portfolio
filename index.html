@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Yashwanth's Portfolio Website</title>
+    <title>Yashwanth Sai Kasarabada | Data Science &amp; AI Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Yashwanth Sai Kasarabada — Data Science, Analytics, Data Engineering &amp; AI professional. B.Tech CSE (AI &amp; DS) at IIIT Manipur with internships at Everlytics, HiFX, Celebal &amp; Infosys Springboard.">
+    <meta name="keywords" content="Yashwanth Kasarabada, Data Science, Data Engineering, Machine Learning, AI, Portfolio, Analytics, IIIT Manipur">
+    <meta name="author" content="Yashwanth Sai Kasarabada">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yashhackz360.github.io/Yashwanth-Portfolio/">
+    <meta property="og:title" content="Yashwanth Sai Kasarabada | Data Science &amp; AI Portfolio">
+    <meta property="og:description" content="Transforming raw data into meaningful insights. Data Science, Analytics, Data Engineering &amp; AI professional with multiple internship experiences.">
+    <meta property="og:image" content="assets/images/yash.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yashwanth Sai Kasarabada | Data Science &amp; AI Portfolio">
+    <meta name="twitter:description" content="Transforming raw data into meaningful insights. Data Science, Analytics &amp; AI professional.">
+    <meta name="twitter:image" content="assets/images/yash.jpg">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,183 +33,198 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    
+
+    <!-- Page Progress Bar -->
+    <div class="page-progress" id="pageProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
     <!-- Navigation -->
-    <header>
-        <nav>
-            <a href="#" class="logo">Yashwanth's <span>Portfolio</span></a>
-            <div class="nav-links">
-                <a href="#hero" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+    <header id="mainHeader">
+        <nav class="nav-inner">
+            <a href="#" class="logo" aria-label="Yashwanth Portfolio Home">
+                <span class="logo-mark"><i class="fas fa-chart-network"></i></span>
+                <span class="logo-text">Yashwanth<span class="logo-accent">.</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#education" class="nav-link" data-section="education">Education</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
             </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO SECTION                               -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-greeting">
-                        <span class="greeting-text">Hi, I am</span>
+        <div class="hero-grid container">
+            <!-- Left column: Text + CTA -->
+            <div class="hero-text">
+                <div class="hero-greeting reveal-fast">
+                    <span class="greeting-text">Hi, I am</span>
+                </div>
+
+                <h1 class="hero-name">
+                    <span class="name-part" data-text="Yashwanth">Yashwanth</span>
+                    <span class="name-part" data-text="Sai">Sai</span>
+                    <span class="name-part" data-text="Kasarabada">Kasarabada</span>
+                </h1>
+
+                <div class="hero-job-title">
+                    <span class="animated-text">
+                        <span class="text-slide">DATA SCIENCE</span>
+                        <span class="text-slide">ANALYTICS &amp; BI</span>
+                        <span class="text-slide">DATA ENGINEER</span>
+                        <span class="text-slide">AI &amp; ML</span>
+                    </span>
+                </div>
+
+                <p class="hero-tagline typewriter-text">
+                    Transforming raw data into meaningful insights through innovative analytics and cutting-edge technology.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="https://drive.google.com/file/d/1i-NvraXXSCtWTuYYQ_t4HxvgKPr6Ejhc/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener">
+                        <span class="btn-inner"><i class="fas fa-file-pdf"></i><span>View Resume</span></span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span class="btn-inner"><i class="fas fa-paper-plane"></i><span>Contact Me</span></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right column: Animated SVG Data Illustration -->
+            <div class="hero-illustration" aria-hidden="true">
+                <div class="hex-grid">
+                    <div class="hex-ring hex-ring--1"></div>
+                    <div class="hex-ring hex-ring--2"></div>
+                    <div class="hex-ring hex-ring--3"></div>
+                    <div class="hex-center">
+                        <i class="fas fa-database hex-core-icon"></i>
                     </div>
-                    <h1 class="hero-name">
-                        <span class="name-part" data-text="Yashwanth">Yashwanth</span>
-                        <span class="name-part" data-text="Sai">Sai</span>
-                        <span class="name-part" data-text="Kasarabada">Kasarabada</span>
-                    </h1>
-                    <div class="hero-job-title">
-                        
-                         <span class="animated-text">
-                            <span class="text-slide">DATA SCIENCE</span>
-                            <span class="text-slide">ANALYTICS & BI</span>
-                            <span class="text-slide">DATA ENGINEER</span>
-                            <span class="text-slide">AI & ML</span>
-                        </span>
-                    </div>
-                    <p class="hero-tagline">
-                        <span class="tagline-word">" Transforming</span>
-                        <span class="tagline-word">raw</span>
-                        <span class="tagline-word">data</span>
-                        <span class="tagline-word">into</span>
-                        <span class="tagline-word">meaningful</span>
-                        <span class="tagline-word">insights</span>
-                        <span class="tagline-word">through</span>
-                        <span class="tagline-word">innovative</span>
-                        <span class="tagline-word">analytics</span>
-                        <span class="tagline-word">and</span>
-                        <span class="tagline-word">cutting-edge</span>
-                        <span class="tagline-word">technology! "</span>
-                    </p>
-                    
-                    <div class="hero-cta">
-                        <a href="https://drive.google.com/file/d/1i-NvraXXSCtWTuYYQ_t4HxvgKPr6Ejhc/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener">
-                            <span class="btn-text">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>View Resume</span>
-                            </span>
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <span class="btn-text">
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Contact Me</span>
-                            </span>
-                        </a>
-                    </div>
+                    <!-- Orbiting icons -->
+                    <div class="orbit-icon orbit-icon--1" style="--orbit-delay:0s"><i class="fas fa-chart-line"></i></div>
+                    <div class="orbit-icon orbit-icon--2" style="--orbit-delay:1.5s"><i class="fas fa-brain"></i></div>
+                    <div class="orbit-icon orbit-icon--3" style="--orbit-delay:3s"><i class="fas fa-robot"></i></div>
+                    <div class="orbit-icon orbit-icon--4" style="--orbit-delay:4.5s"><i class="fas fa-code"></i></div>
+                    <div class="orbit-icon orbit-icon--5" style="--orbit-delay:6s"><i class="fas fa-server"></i></div>
+                </div>
+                <!-- Floating data nodes -->
+                <div class="data-nodes">
+                    <div class="data-node" style="--dn-x:70%;--dn-y:15%;--dn-dur:6s;--dn-del:0s"></div>
+                    <div class="data-node" style="--dn-x:20%;--dn-y:70%;--dn-dur:8s;--dn-del:1s"></div>
+                    <div class="data-node" style="--dn-x:80%;--dn-y:65%;--dn-dur:7s;--dn-del:2s"></div>
+                    <div class="data-node" style="--dn-x:10%;--dn-y:30%;--dn-dur:9s;--dn-del:0.5s"></div>
+                    <div class="data-node data-node--lg" style="--dn-x:60%;--dn-y:80%;--dn-dur:5s;--dn-del:1.5s"></div>
                 </div>
             </div>
         </div>
-        
-        <!-- Floating Elements -->
-        <div class="floating-elements">
-            <div class="floating-icon" style="--delay: 0s; --duration: 6s;">
-                <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="floating-icon" style="--delay: 2s; --duration: 8s;">
-                <i class="fas fa-brain"></i>
-            </div>
-            <div class="floating-icon" style="--delay: 4s; --duration: 7s;">
-                <i class="fas fa-database"></i>
-            </div>
-            <div class="floating-icon" style="--delay: 1s; --duration: 9s;">
-                <i class="fas fa-robot"></i>
-            </div>
-            <div class="floating-icon" style="--delay: 3s; --duration: 6.5s;">
-                <i class="fas fa-code"></i>
-            </div>
-        </div>
-        <div class="scroll-down-indicator" id="scrollIndicator">
-            
+
+        <div class="scroll-down-indicator" id="scrollIndicator" role="button" aria-label="Scroll down" tabindex="0">
+            <span class="scroll-text">Scroll</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ABOUT SECTION                              -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="about">
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
                 <p class="section-sub">Data professional turning raw data into decisions that matter</p>
             </div>
-            <div class="about-container">
-                <div class="about-content">
-                    <div class="about-image-section">
-                        <div class="about-image-placeholder">
-                            <img src="assets/images/yash.jpg" alt="About Yashwanth" loading="lazy">
+
+            <div class="about-grid">
+                <!-- Sticky left column: photo + stat cards -->
+                <div class="about-sidebar">
+                    <div class="about-photo-wrap reveal">
+                        <img src="assets/images/yash.jpg" alt="Yashwanth Sai Kasarabada — profile photo" loading="lazy">
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card reveal reveal-delay-1">
+                            <i class="fas fa-trophy stat-icon"></i>
+                            <span class="stat-label">4 Internships</span>
+                            <span class="stat-desc">Data Engineering, Science &amp; Analytics</span>
                         </div>
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <i class="fas fa-trophy"></i>
-                                <span>Multiple successful internships in data domain</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-project-diagram"></i>
-                                <span>Led end-to-end data projects from conception to deployment</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-brain"></i>
-                                <span>Specialized in ML, Data Engineering, and Analytics</span>
-                            </div>
+                        <div class="stat-card reveal reveal-delay-2">
+                            <i class="fas fa-project-diagram stat-icon"></i>
+                            <span class="stat-label">End-to-End Projects</span>
+                            <span class="stat-desc">From data infra to AI-powered apps</span>
+                        </div>
+                        <div class="stat-card reveal reveal-delay-3">
+                            <i class="fas fa-brain stat-icon"></i>
+                            <span class="stat-label">ML · DE · Analytics</span>
+                            <span class="stat-desc">Specialized across the data stack</span>
                         </div>
                     </div>
-                    <div class="about-text">
-                        <p>
-                            I'm a passionate data professional currently pursuing my B.Tech in Computer Science with specialization in AI & Data Science at IIIT Manipur. My journey in the world of data began with a curiosity about how numbers can tell compelling stories and drive meaningful business decisions.
-                        </p>
-                        <p>
-                            With multiple internships spanning Data Engineering, Data Science, and Analytics, I've developed a comprehensive skill set that bridges the gap between technical implementation and business value. My experience includes building cloud-native data infrastructures, developing machine learning pipelines, and creating interactive dashboards that transform complex data into actionable insights.
-                        </p>
-                        <p>
-                            My approach combines rigorous analytical thinking with creative problem-solving. I'm particularly passionate about leveraging modern data technologies like Apache Spark, cloud platforms (AWS, GCP), and machine learning frameworks to solve real-world challenges. Whether it's building semantic search engines, developing predictive models, or creating comprehensive data visualization platforms, I thrive on projects that make a tangible impact.
-                        </p>
-                        <p>
-                            Beyond technical skills, I believe in the power of collaboration and continuous learning. I actively contribute to open-source projects, stay updated with the latest industry trends, and enjoy sharing knowledge with the data science community. My goal is to become a well-rounded data professional who can lead data-driven initiatives and mentor the next generation of data enthusiasts.
-                        </p>
+                </div>
+
+                <!-- Right column: bio text with read-more -->
+                <div class="about-bio">
+                    <div class="bio-content reveal" id="bioContent">
+                        <p>I'm a passionate data professional currently pursuing my B.Tech in Computer Science with specialization in AI &amp; Data Science at IIIT Manipur. My journey in the world of data began with a curiosity about how numbers can tell compelling stories and drive meaningful business decisions.</p>
+                        <p>With multiple internships spanning Data Engineering, Data Science, and Analytics, I've developed a comprehensive skill set that bridges the gap between technical implementation and business value. My experience includes building cloud-native data infrastructures, developing machine learning pipelines, and creating interactive dashboards that transform complex data into actionable insights.</p>
+                        <div class="bio-extra" id="bioExtra">
+                            <p>My approach combines rigorous analytical thinking with creative problem-solving. I'm particularly passionate about leveraging modern data technologies like Apache Spark, cloud platforms (AWS, GCP), and machine learning frameworks to solve real-world challenges. Whether it's building semantic search engines, developing predictive models, or creating comprehensive data visualization platforms, I thrive on projects that make a tangible impact.</p>
+                            <p>Beyond technical skills, I believe in the power of collaboration and continuous learning. I actively contribute to open-source projects, stay updated with the latest industry trends, and enjoy sharing knowledge with the data science community. My goal is to become a well-rounded data professional who can lead data-driven initiatives and mentor the next generation of data enthusiasts.</p>
+                        </div>
                     </div>
+                    <button class="read-more-btn" id="readMoreBtn" aria-expanded="false">
+                        <span class="read-more-label">Read more</span>
+                        <i class="fas fa-chevron-down read-more-icon"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- EXPERIENCE SECTION — Vertical Timeline     -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="experience">
         <div class="container">
             <div class="section-header">
                 <h2>Experience</h2>
                 <p class="section-sub">4 internships across data engineering, data science, and analytics</p>
             </div>
-            <div class="experience-carousel">
-                <button class="carousel-nav prev" aria-label="Previous experience">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="carousel-container">
-                    <!-- Everlytics / Tata Communications -->
-                    <div class="experience-card reveal">
-                        <div class="card-header">
+
+            <div class="timeline" id="experienceTimeline">
+                <!-- Timeline progress line -->
+                <div class="timeline-line" id="timelineLine"></div>
+
+                <!-- Everlytics / Tata Communications -->
+                <div class="timeline-item reveal" style="--card-accent: #38bdf8">
+                    <div class="timeline-date">
+                        <span>Nov 2025</span>
+                        <span class="timeline-date-sep">–</span>
+                        <span>May 2026</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-dot" style="background: #38bdf8"></div>
                             <h3>Data Engineering Intern</h3>
-                            <h4>Everlytics Data Science India LLP</h4>
-                            <div class="card-date">Nov 2025 – May 2026</div>
-                            <div class="card-team">Database Administration (DBA) Team</div>
+                            <h4><i class="fas fa-building"></i> Everlytics Data Science India LLP</h4>
+                            <span class="timeline-team"><i class="fas fa-users"></i> Database Administration (DBA) Team</span>
                         </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Contributed to Tata Communications' MOVE Team Data Lakehouse migration from legacy systems to Apache Doris-based Medallion architecture, focusing on RBAC, data governance, and lineage tracking</li>
-                                <li><i class="fas fa-check-circle"></i> Engineered SQL validation, reconciliation, and audit workflows across billion-row telecom mediation, billing, and usage datasets, improving ETL accuracy and query performance</li>
-                                <li><i class="fas fa-check-circle"></i> Ported legacy views and tables from Hadoop/HiveQL, Oracle, MSSQL, and PostgreSQL to Doris SQL; deployed across Dev, Pre-Prod, and Prod environments</li>
-                                <li><i class="fas fa-check-circle"></i> Implemented structured RBAC framework enforcing least-privilege access at database and table levels across all environments</li>
-                                <li><i class="fas fa-check-circle"></i> Contributed to Apache Airflow DAGs for automated Hadoop-to-Doris extraction via MinIO; executed column-level MINUS query validations for data integrity</li>
-                                <li><i class="fas fa-check-circle"></i> Built BI data engineering pipelines powering business-critical dashboards for Nordic and Western European markets</li>
-                            </ul>
-                        </div>
-                        <div class="card-tech">
+                        <ul class="timeline-bullets">
+                            <li><i class="fas fa-check-circle"></i> Contributed to Tata Communications' MOVE Team Data Lakehouse migration from legacy systems to Apache Doris-based Medallion architecture, focusing on RBAC, data governance, and lineage tracking</li>
+                            <li><i class="fas fa-check-circle"></i> Engineered SQL validation, reconciliation, and audit workflows across billion-row telecom mediation, billing, and usage datasets, improving ETL accuracy and query performance</li>
+                            <li><i class="fas fa-check-circle"></i> Ported legacy views and tables from Hadoop/HiveQL, Oracle, MSSQL, and PostgreSQL to Doris SQL; deployed across Dev, Pre-Prod, and Prod environments</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented structured RBAC framework enforcing least-privilege access at database and table levels across all environments</li>
+                            <li><i class="fas fa-check-circle"></i> Contributed to Apache Airflow DAGs for automated Hadoop-to-Doris extraction via MinIO; executed column-level MINUS query validations for data integrity</li>
+                            <li><i class="fas fa-check-circle"></i> Built BI data engineering pipelines powering business-critical dashboards for Nordic and Western European markets</li>
+                        </ul>
+                        <div class="timeline-tags">
                             <span class="tech-tag">Apache Doris</span>
                             <span class="tech-tag">Airflow</span>
                             <span class="tech-tag">MinIO</span>
@@ -199,69 +234,84 @@
                             <span class="tech-tag">Medallion Architecture</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Data Engineering Intern -->
-                    <div class="experience-card reveal reveal-delay-1">
-                        <div class="card-header">
+                <!-- HiFX IT & Media Services -->
+                <div class="timeline-item reveal reveal-delay-1" style="--card-accent: #a78bfa">
+                    <div class="timeline-date">
+                        <span>May 2025</span>
+                        <span class="timeline-date-sep">–</span>
+                        <span>Jul 2025</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-dot" style="background: #a78bfa"></div>
                             <h3>Data Engineering Intern</h3>
-                            <h4>HiFX IT & Media Services Pvt. Ltd.</h4>
-                            <div class="card-date">May 2025 – Jul 2025</div>
+                            <h4><i class="fas fa-building"></i> HiFX IT &amp; Media Services Pvt. Ltd.</h4>
                         </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Developed a Proof of Concept to modernize the data infrastructure</li>
-                                <li><i class="fas fa-check-circle"></i> Explored a weather dataset using lakehouse setup</li>
-                                <li><i class="fas fa-check-circle"></i> Built secure RESTful APIs with Flask and JWT</li>
-                                <li><i class="fas fa-check-circle"></i> Created AI-powered semantic search engine</li>
-                            </ul>
-                        </div>
-                        <div class="card-tech">
+                        <ul class="timeline-bullets">
+                            <li><i class="fas fa-check-circle"></i> Developed a Proof of Concept to modernize the data infrastructure</li>
+                            <li><i class="fas fa-check-circle"></i> Explored a weather dataset using lakehouse setup</li>
+                            <li><i class="fas fa-check-circle"></i> Built secure RESTful APIs with Flask and JWT</li>
+                            <li><i class="fas fa-check-circle"></i> Created AI-powered semantic search engine</li>
+                        </ul>
+                        <div class="timeline-tags">
                             <span class="tech-tag">Apache Spark</span>
                             <span class="tech-tag">MinIO</span>
                             <span class="tech-tag">Flask</span>
                             <span class="tech-tag">Pinecone</span>
                         </div>
                     </div>
-                    
-                    <!-- Data Science Intern -->
-                    <div class="experience-card reveal reveal-delay-2">
-                        <div class="card-header">
+                </div>
+
+                <!-- Celebal Technologies -->
+                <div class="timeline-item reveal reveal-delay-2" style="--card-accent: #34d399">
+                    <div class="timeline-date">
+                        <span>May 2025</span>
+                        <span class="timeline-date-sep">–</span>
+                        <span>Jul 2025</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-dot" style="background: #34d399"></div>
                             <h3>Data Science Intern</h3>
-                            <h4>Celebal Technologies</h4>
-                            <div class="card-date">May 2025 – Jul 2025</div>
+                            <h4><i class="fas fa-building"></i> Celebal Technologies</h4>
                         </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Built house price prediction pipeline</li>
-                                <li><i class="fas fa-check-circle"></i> Conducted EDA using Pandas and Seaborn</li>
-                                <li><i class="fas fa-check-circle"></i> Deployed ML models as Streamlit web apps</li>
-                                <li><i class="fas fa-check-circle"></i> Created RAG chatbot with FAISS</li>
-                            </ul>
-                        </div>
-                        <div class="card-tech">
+                        <ul class="timeline-bullets">
+                            <li><i class="fas fa-check-circle"></i> Built house price prediction pipeline</li>
+                            <li><i class="fas fa-check-circle"></i> Conducted EDA using Pandas and Seaborn</li>
+                            <li><i class="fas fa-check-circle"></i> Deployed ML models as Streamlit web apps</li>
+                            <li><i class="fas fa-check-circle"></i> Created RAG chatbot with FAISS</li>
+                        </ul>
+                        <div class="timeline-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">Streamlit</span>
                             <span class="tech-tag">Hugging Face</span>
                         </div>
                     </div>
-                    
-                    <!-- Infosys Springboard -->
-                    <div class="experience-card reveal reveal-delay-3">
-                        <div class="card-header">
+                </div>
+
+                <!-- Infosys Springboard -->
+                <div class="timeline-item reveal reveal-delay-3" style="--card-accent: #fb923c">
+                    <div class="timeline-date">
+                        <span>Nov 2024</span>
+                        <span class="timeline-date-sep">–</span>
+                        <span>Feb 2025</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-dot" style="background: #fb923c"></div>
                             <h3>Data Analyst Intern</h3>
-                            <h4>Infosys Springboard</h4>
-                            <div class="card-date">Nov 2024 – Feb 2025</div>
+                            <h4><i class="fas fa-building"></i> Infosys Springboard</h4>
                         </div>
-                        <div class="card-body">
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Spearheaded IndiaCityGDP visualization</li>
-                                <li><i class="fas fa-check-circle"></i> Constructed interactive dashboards</li>
-                                <li><i class="fas fa-check-circle"></i> Acquired and refined 100,000+ data points</li>
-                                <li><i class="fas fa-check-circle"></i> Designed AI chatbot for user queries</li>
-                            </ul>
-                        </div>
-                        <div class="card-tech">
+                        <ul class="timeline-bullets">
+                            <li><i class="fas fa-check-circle"></i> Spearheaded IndiaCityGDP visualization</li>
+                            <li><i class="fas fa-check-circle"></i> Constructed interactive dashboards</li>
+                            <li><i class="fas fa-check-circle"></i> Acquired and refined 100,000+ data points</li>
+                            <li><i class="fas fa-check-circle"></i> Designed AI chatbot for user queries</li>
+                        </ul>
+                        <div class="timeline-tags">
                             <span class="tech-tag">Power BI</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Pandas</span>
@@ -269,148 +319,220 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-nav next" aria-label="Next experience">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                <div class="carousel-dots"></div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- EDUCATION SECTION                          -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="education">
         <div class="container">
             <div class="section-header">
                 <h2>Education</h2>
-                <p class="section-sub">B.Tech in CSE (AI & DS) · IIIT Manipur · Nov 2022 – Jun 2026</p>
+                <p class="section-sub">B.Tech in CSE (AI &amp; DS) · IIIT Manipur · Nov 2022 – Jun 2026</p>
             </div>
-            <div class="education-grid">
-                <div class="education-card reveal">
-                    <h3>B.Tech in CSE (AI & DS)</h3>
-                    <h4>Indian Institute of Information Technology Manipur (IIIT Manipur)</h4>
-                    <p>Currently pursuing · CGPA 6.65 (Till 7th Semester)</p>
-                    <div class="education-meta">
-                        <span><i class="fas fa-calendar-alt"></i> Nov 2022 – Jun 2026</span>
-                        <span><i class="fas fa-map-marker-alt"></i> Imphal, India</span>
+
+            <!-- Featured B.Tech Card -->
+            <div class="edu-featured reveal">
+                <div class="edu-featured-badge">
+                    <span class="pulse-dot"></span>
+                    In Progress
+                </div>
+                <div class="edu-featured-content">
+                    <div class="edu-icon-wrap">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-featured-info">
+                        <h3>B.Tech in CSE (AI &amp; Data Science)</h3>
+                        <h4>Indian Institute of Information Technology Manipur (IIIT Manipur)</h4>
+                        <p class="edu-score">CGPA: <strong>6.65</strong> <span class="score-note">(Till 7th Semester)</span></p>
+                        <div class="edu-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Nov 2022 – Jun 2026</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Imphal, India</span>
+                        </div>
+                        <!-- Semester progress bar -->
+                        <div class="semester-progress-wrap">
+                            <div class="semester-progress-label">
+                                <span>Semester Progress</span>
+                                <span>7 / 8</span>
+                            </div>
+                            <div class="semester-progress-bar">
+                                <div class="semester-progress-fill" style="--progress-width: 87.5%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="education-card reveal reveal-delay-1">
-                    <h3>Intermediate (12th Grade)</h3>
-                    <h4>Jupiter Junior College (APBSE)</h4>
-                    <p>Percentage: 84%</p>
-                    <div class="education-meta">
-                        <span><i class="fas fa-calendar-alt"></i> 2020 – 2022</span>
-                        <span><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</span>
+            </div>
+
+            <!-- Dashed connector -->
+            <div class="edu-connector" aria-hidden="true">
+                <div class="edu-connector-line"></div>
+                <div class="edu-connector-dot"></div>
+            </div>
+
+            <!-- Paired cards row -->
+            <div class="edu-pair">
+                <!-- 12th Grade -->
+                <div class="edu-pair-card reveal reveal-delay-1">
+                    <div class="edu-pair-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="edu-pair-info">
+                        <h3>Intermediate (12th Grade)</h3>
+                        <h4>Jupiter Junior College (APBSE)</h4>
+                        <div class="edu-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 2020 – 2022</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Andhra Pradesh</span>
+                        </div>
+                    </div>
+                    <!-- Circular arc score -->
+                    <div class="score-arc-wrap">
+                        <svg class="score-arc" viewBox="0 0 80 80" aria-label="Score 84%">
+                            <circle class="score-arc-bg" cx="40" cy="40" r="30" />
+                            <circle class="score-arc-fill" cx="40" cy="40" r="30"
+                                style="--score-pct: 84" data-score="84" />
+                        </svg>
+                        <div class="score-arc-label">
+                            <span class="score-value">84%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="education-card reveal reveal-delay-2">
-                    <h3>High School (10th Grade)</h3>
-                    <h4>Little Flower English Medium School (ICSE)</h4>
-                    <p>Percentage: 82%</p>
-                    <div class="education-meta">
-                        <span><i class="fas fa-calendar-alt"></i> 2010 – 2020</span>
-                        <span><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</span>
+
+                <!-- 10th Grade -->
+                <div class="edu-pair-card reveal reveal-delay-2">
+                    <div class="edu-pair-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="edu-pair-info">
+                        <h3>High School (10th Grade)</h3>
+                        <h4>Little Flower English Medium School (ICSE)</h4>
+                        <div class="edu-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 2010 – 2020</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Andhra Pradesh</span>
+                        </div>
+                    </div>
+                    <!-- Circular arc score -->
+                    <div class="score-arc-wrap">
+                        <svg class="score-arc" viewBox="0 0 80 80" aria-label="Score 82%">
+                            <circle class="score-arc-bg" cx="40" cy="40" r="30" />
+                            <circle class="score-arc-fill" cx="40" cy="40" r="30"
+                                style="--score-pct: 82" data-score="82" />
+                        </svg>
+                        <div class="score-arc-label">
+                            <span class="score-value">82%</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROJECTS SECTION                           -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="projects">
         <div class="container">
             <div class="section-header">
                 <h2>Projects</h2>
                 <p class="section-sub">End-to-end builds from data infrastructure to AI-powered applications</p>
             </div>
+
             <div class="projects-grid">
-                
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <i class="fas fa-robot"></i>
+
+                <!-- FinReg AI -->
+                <div class="project-card reveal" style="--card-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                    <div class="project-banner">
+                        <div class="project-banner-dots" aria-hidden="true"></div>
+                        <i class="fas fa-robot project-banner-icon"></i>
                     </div>
                     <div class="project-content">
                         <h3>FinReg AI: RAG Powered Real-Time Regulatory Assistant</h3>
                         <div class="project-meta">
-                            <span>Oct 2025</span>
-                            <span>Guided by Dr. Navanath Saharia(Prof IIIT M)</span>
+                            <span><i class="fas fa-calendar-alt"></i> Oct 2025</span>
+                            <span><i class="fas fa-user-tie"></i> Dr. Navanath Saharia (Prof IIIT M)</span>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">AI</span>
+                        <div class="project-tags-wrap">
+                            <div class="project-tech" data-all-tags="Python,Kafka,Docker,RAG,Streamlit,AI">
+                                <span class="tech-tag tag-infra">Python</span>
+                                <span class="tech-tag tag-infra">Kafka</span>
+                                <span class="tech-tag tag-infra">Docker</span>
+                                <span class="tech-tag tag-ai">RAG</span>
+                                <span class="tech-tag tag-ai">Streamlit</span>
+                                <span class="tech-tag tag-ai">AI</span>
+                            </div>
                         </div>
-                        <p>
-                            A real-time, event-driven RAG system for Indian financial regulations, built with Python, Kafka, Pinecone, Groq, and Docker.
-                        </p>
+                        <p>A real-time, event-driven RAG system for Indian financial regulations, built with Python, Kafka, Pinecone, Groq, and Docker.</p>
                         <div class="project-links">
-                            <a href="https://github.com/yashhackz360/FINREG-AI" target="_blank" rel="noopener">
+                            <a href="https://github.com/yashhackz360/FINREG-AI" target="_blank" rel="noopener" class="proj-link-code">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card reveal reveal-delay-1">
-                    <div class="project-image">
-                        <i class="fas fa-search"></i>
+                <!-- Hybrid Semantic Search -->
+                <div class="project-card reveal reveal-delay-1" style="--card-gradient: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)">
+                    <div class="project-banner">
+                        <div class="project-banner-dots" aria-hidden="true"></div>
+                        <i class="fas fa-search project-banner-icon"></i>
+                        <span class="live-badge" aria-label="Live demo available"><span class="live-dot"></span>Live</span>
                     </div>
                     <div class="project-content">
                         <h3>Hybrid Semantic Search: A Product Discovery Engine for E-Commerce</h3>
                         <div class="project-meta">
-                            <span>Jul 2025</span>
-                            <span>Guided by Mr.Pranav Dev</span>
+                            <span><i class="fas fa-calendar-alt"></i> Jul 2025</span>
+                            <span><i class="fas fa-user-tie"></i> Mr. Pranav Dev</span>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Sentence Transformers</span>
-                            <span class="tech-tag">Pinecone</span>
-                            <span class="tech-tag">Re-Ranking</span>
-                            <span class="tech-tag">NLP</span>
+                        <div class="project-tags-wrap">
+                            <div class="project-tech">
+                                <span class="tech-tag tag-lang">Python</span>
+                                <span class="tech-tag tag-ai">Sentence Transformers</span>
+                                <span class="tech-tag tag-ai">Pinecone</span>
+                                <span class="tech-tag tag-ai">Re-Ranking</span>
+                                <span class="tech-tag tag-ai">NLP</span>
+                            </div>
                         </div>
-                        <p>
-                            A sophisticated, multi-layered search engine designed to understand natural language queries and provide highly relevant results for E-Commerce products. 
-                        </p>
+                        <p>A sophisticated, multi-layered search engine designed to understand natural language queries and provide highly relevant results for E-Commerce products.</p>
                         <div class="project-links">
-                            <a href="https://github.com/yashhackz360/Hybrid-Semantic-Search" target="_blank" rel="noopener">
+                            <a href="https://github.com/yashhackz360/Hybrid-Semantic-Search" target="_blank" rel="noopener" class="proj-link-code">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <a href="https://hybrid-semantic-search-cxdrvmbxbkkctoeaobeau7.streamlit.app/" target="_blank" rel="noopener">
+                            <a href="https://hybrid-semantic-search-cxdrvmbxbkkctoeaobeau7.streamlit.app/" target="_blank" rel="noopener" class="proj-link-demo">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card reveal reveal-delay-2">
-                    <div class="project-image">
-                        <i class="fas fa-train"></i>
+
+                <!-- Railway Accident Analytics -->
+                <div class="project-card reveal reveal-delay-2" style="--card-gradient: linear-gradient(135deg, #fb923c 0%, #f59e0b 100%)">
+                    <div class="project-banner">
+                        <div class="project-banner-dots" aria-hidden="true"></div>
+                        <i class="fas fa-train project-banner-icon"></i>
+                        <span class="live-badge" aria-label="Live demo available"><span class="live-dot"></span>Live</span>
                     </div>
                     <div class="project-content">
                         <h3>Railway Accident Analytics: A Data-Driven Approach</h3>
                         <div class="project-meta">
-                            <span>Mar 2025</span>
-                            <span>Guided by Dr. Sanasam Chanu Inunganbi(Prof IIIT M)</span>
+                            <span><i class="fas fa-calendar-alt"></i> Mar 2025</span>
+                            <span><i class="fas fa-user-tie"></i> Dr. Sanasam Chanu Inunganbi (Prof IIIT M)</span>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Power BI</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Artificial Intelligence</span>
+                        <div class="project-tags-wrap">
+                            <div class="project-tech">
+                                <span class="tech-tag tag-lang">Python</span>
+                                <span class="tech-tag tag-infra">Streamlit</span>
+                                <span class="tech-tag tag-bi">Power BI</span>
+                                <span class="tech-tag tag-ai">Machine Learning</span>
+                                <span class="tech-tag tag-ai">Artificial Intelligence</span>
+                            </div>
                         </div>
-                        <p>
-                            A comprehensive analysis platform for railway accident data with visualization dashboards
-                            and predictive modeling capabilities.
-                        </p>
+                        <p>A comprehensive analysis platform for railway accident data with visualization dashboards and predictive modeling capabilities.</p>
                         <div class="project-links">
-                            <a href="https://github.com/yashhackz360/Railway_Accdeint_Analytics_A_data_driven_AI_Approach" target="_blank" rel="noopener">
+                            <a href="https://github.com/yashhackz360/Railway_Accdeint_Analytics_A_data_driven_AI_Approach" target="_blank" rel="noopener" class="proj-link-code">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            <a href="https://railwayaccdeintanalyticsadatadrivenaiapproach-imbqwad48dd3qlse.streamlit.app/" target="_blank" rel="noopener">
+                            <a href="https://railwayaccdeintanalyticsadatadrivenaiapproach-imbqwad48dd3qlse.streamlit.app/" target="_blank" rel="noopener" class="proj-link-demo">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
                             </a>
                         </div>
@@ -421,74 +543,87 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SKILLS SECTION                             -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="skills">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header section-header--center">
                 <h2>Skills</h2>
                 <p class="section-sub">A comprehensive toolkit spanning data science, engineering, cloud, and AI</p>
             </div>
 
-            <div class="skills-categories">
+            <!-- Filter bar -->
+            <div class="skills-filter" role="group" aria-label="Skill filter">
+                <button class="filter-btn active" data-filter="all" id="filterAll">All Skills</button>
+                <button class="filter-btn" data-filter="core" id="filterCore">Core Only</button>
+            </div>
 
-                <div class="skill-category-group reveal">
-                    <h4 class="skill-cat-title"><i class="fas fa-code"></i> Languages</h4>
-                    <div class="skills-row">
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-python"></i></div><div class="skill-name">Python</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-database"></i></div><div class="skill-name">SQL</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-r-project"></i></div><div class="skill-name">R</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-code"></i></div><div class="skill-name">C / C++</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-terminal"></i></div><div class="skill-name">Bash</div></div>
+            <div class="skills-grid">
+
+                <!-- Languages -->
+                <div class="skill-panel reveal">
+                    <h4 class="skill-panel-title"><i class="fas fa-code"></i> Languages</h4>
+                    <div class="skills-pills">
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fab fa-python"></i></div><span class="skill-name">Python</span></div>
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-database"></i></div><span class="skill-name">SQL</span></div>
+                        <div class="skill-pill" data-tier="familiar"><div class="skill-icon"><i class="fab fa-r-project"></i></div><span class="skill-name">R</span></div>
+                        <div class="skill-pill" data-tier="familiar"><div class="skill-icon"><i class="fas fa-code"></i></div><span class="skill-name">C / C++</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-terminal"></i></div><span class="skill-name">Bash</span></div>
                     </div>
                 </div>
 
-                <div class="skill-category-group reveal reveal-delay-1">
-                    <h4 class="skill-cat-title"><i class="fas fa-brain"></i> ML & AI</h4>
-                    <div class="skills-row">
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-brain"></i></div><div class="skill-name">Scikit-Learn</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-project-diagram"></i></div><div class="skill-name">TensorFlow</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-fire"></i></div><div class="skill-name">PyTorch</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-language"></i></div><div class="skill-name">NLP</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-robot"></i></div><div class="skill-name">Hugging Face</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-search"></i></div><div class="skill-name">RAG / Vector Search</div></div>
+                <!-- ML & AI -->
+                <div class="skill-panel reveal reveal-delay-1">
+                    <h4 class="skill-panel-title"><i class="fas fa-brain"></i> ML &amp; AI</h4>
+                    <div class="skills-pills">
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-brain"></i></div><span class="skill-name">Scikit-Learn</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-project-diagram"></i></div><span class="skill-name">TensorFlow</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-fire"></i></div><span class="skill-name">PyTorch</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-language"></i></div><span class="skill-name">NLP</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-robot"></i></div><span class="skill-name">Hugging Face</span></div>
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-search"></i></div><span class="skill-name">RAG / Vector Search</span></div>
                     </div>
                 </div>
 
-                <div class="skill-category-group reveal reveal-delay-2">
-                    <h4 class="skill-cat-title"><i class="fas fa-server"></i> Data Engineering & Cloud</h4>
-                    <div class="skills-row">
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-bolt"></i></div><div class="skill-name">Apache Spark</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-wind"></i></div><div class="skill-name">Apache Airflow</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-docker"></i></div><div class="skill-name">Docker</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-aws"></i></div><div class="skill-name">AWS</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-google"></i></div><div class="skill-name">GCP</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-layer-group"></i></div><div class="skill-name">Apache Doris</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-archive"></i></div><div class="skill-name">MinIO</div></div>
+                <!-- Data Engineering & Cloud -->
+                <div class="skill-panel reveal reveal-delay-2">
+                    <h4 class="skill-panel-title"><i class="fas fa-server"></i> Data Engineering &amp; Cloud</h4>
+                    <div class="skills-pills">
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-bolt"></i></div><span class="skill-name">Apache Spark</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-wind"></i></div><span class="skill-name">Apache Airflow</span></div>
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fab fa-docker"></i></div><span class="skill-name">Docker</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fab fa-aws"></i></div><span class="skill-name">AWS</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fab fa-google"></i></div><span class="skill-name">GCP</span></div>
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-layer-group"></i></div><span class="skill-name">Apache Doris</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-archive"></i></div><span class="skill-name">MinIO</span></div>
                     </div>
                 </div>
 
-                <div class="skill-category-group reveal reveal-delay-1">
-                    <h4 class="skill-cat-title"><i class="fas fa-chart-bar"></i> Analytics & BI</h4>
-                    <div class="skills-row">
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-table"></i></div><div class="skill-name">Pandas</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-calculator"></i></div><div class="skill-name">NumPy</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-chart-line"></i></div><div class="skill-name">Matplotlib</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-chart-area"></i></div><div class="skill-name">Seaborn</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-chart-pie"></i></div><div class="skill-name">Power BI</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-file-excel"></i></div><div class="skill-name">Excel</div></div>
+                <!-- Analytics & BI -->
+                <div class="skill-panel reveal reveal-delay-1">
+                    <h4 class="skill-panel-title"><i class="fas fa-chart-bar"></i> Analytics &amp; BI</h4>
+                    <div class="skills-pills">
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-table"></i></div><span class="skill-name">Pandas</span></div>
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fas fa-calculator"></i></div><span class="skill-name">NumPy</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-chart-line"></i></div><span class="skill-name">Matplotlib</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-chart-area"></i></div><span class="skill-name">Seaborn</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-chart-pie"></i></div><span class="skill-name">Power BI</span></div>
+                        <div class="skill-pill" data-tier="familiar"><div class="skill-icon"><i class="fas fa-file-excel"></i></div><span class="skill-name">Excel</span></div>
                     </div>
                 </div>
 
-                <div class="skill-category-group reveal reveal-delay-2">
-                    <h4 class="skill-cat-title"><i class="fas fa-tools"></i> Dev Tools & Platforms</h4>
-                    <div class="skills-row">
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><div class="skill-name">Git</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-rocket"></i></div><div class="skill-name">Streamlit</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-flask"></i></div><div class="skill-name">Flask</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div><div class="skill-name">FastAPI</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-key"></i></div><div class="skill-name">JWT</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-linux"></i></div><div class="skill-name">Linux</div></div>
-                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-windows"></i></div><div class="skill-name">Windows</div></div>
+                <!-- Dev Tools — spans both columns -->
+                <div class="skill-panel skill-panel--wide reveal reveal-delay-2">
+                    <h4 class="skill-panel-title"><i class="fas fa-tools"></i> Dev Tools &amp; Platforms</h4>
+                    <div class="skills-pills">
+                        <div class="skill-pill" data-tier="core"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><span class="skill-name">Git</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-rocket"></i></div><span class="skill-name">Streamlit</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-flask"></i></div><span class="skill-name">Flask</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fas fa-tachometer-alt"></i></div><span class="skill-name">FastAPI</span></div>
+                        <div class="skill-pill" data-tier="familiar"><div class="skill-icon"><i class="fas fa-key"></i></div><span class="skill-name">JWT</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fab fa-linux"></i></div><span class="skill-name">Linux</span></div>
+                        <div class="skill-pill" data-tier="proficient"><div class="skill-icon"><i class="fab fa-windows"></i></div><span class="skill-name">Windows</span></div>
                     </div>
                 </div>
 
@@ -496,42 +631,84 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CONTACT SECTION                            -->
+    <!-- ═══════════════════════════════════════════ -->
     <section id="contact">
         <div class="container">
             <div class="section-header section-header--center">
                 <h2>Contact</h2>
                 <p class="section-sub">Open to opportunities, collaborations, and friendly conversations</p>
             </div>
-            <div class="contact-container">
+
+            <div class="contact-grid">
+                <!-- Info column -->
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
+                    <!-- Availability badge -->
+                    <div class="availability-badge" data-available="true">
+                        <span class="avail-dot"></span>
+                        <span class="avail-text">Open to opportunities</span>
+                    </div>
+
+                    <h3>Get in Touch</h3>
+
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:yashwanthkasarabada2003@gmail.com">yashwanthsaikasarabada@gmail.com</a>
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:yashwanthsaikasarabada@gmail.com">yashwanthsaikasarabada@gmail.com</a>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+91**********">+91 **********</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
                         <span>Guntur, Andhra Pradesh, India</span>
                     </div>
-                    <h3>Follow Me</h3>
-                    <div class="contact-social-links">
-                        <a href="https://github.com/yashhackz360" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/yashwanth-kasarabada-ba4265258/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="contact-item">
+                        <i class="fas fa-file-pdf contact-icon"></i>
+                        <a href="https://drive.google.com/file/d/1i-NvraXXSCtWTuYYQ_t4HxvgKPr6Ejhc/view?usp=sharing" target="_blank" rel="noopener" class="resume-dl-link">
+                            Download Resume <i class="fas fa-arrow-down"></i>
+                        </a>
+                    </div>
+
+                    <h3 class="follow-heading">Follow Me</h3>
+                    <div class="contact-socials">
+                        <a href="https://github.com/yashhackz360" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github social-icon"></i>
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yashwanth-kasarabada-ba4265258/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in social-icon"></i>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit">
-                            <i class="fas fa-paper-plane"></i> Send Message
+
+                <!-- Form column -->
+                <div class="contact-form-wrap">
+                    <form id="contactForm" novalidate>
+                        <!-- Float-label inputs -->
+                        <div class="float-field">
+                            <input type="text" id="contact-name" name="from_name" placeholder=" " required autocomplete="name">
+                            <label for="contact-name">Your Name</label>
+                            <span class="field-icon" aria-hidden="true"></span>
+                        </div>
+                        <div class="float-field">
+                            <input type="email" id="contact-email" name="reply_to" placeholder=" " required autocomplete="email">
+                            <label for="contact-email">Your Email</label>
+                            <span class="field-icon" aria-hidden="true"></span>
+                        </div>
+                        <div class="float-field">
+                            <input type="text" id="contact-subject" name="subject" placeholder=" ">
+                            <label for="contact-subject">Subject</label>
+                        </div>
+                        <div class="float-field">
+                            <textarea id="contact-message" name="message" placeholder=" " required></textarea>
+                            <label for="contact-message">Your Message</label>
+                            <span class="field-icon" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+                        <button type="submit" id="submitBtn" class="contact-submit-btn">
+                            <span class="btn-label"><i class="fas fa-paper-plane"></i> Send Message</span>
+                            <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
                         </button>
                     </form>
                 </div>
@@ -542,14 +719,26 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Yashwanth Sai Kasarabada. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/yashhackz360" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yashwanth-kasarabada-ba4265258/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:yashwanthsaikasarabada@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>&copy; 2025 Yashwanth Sai Kasarabada. All rights reserved.</p>
+                <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/particles.js"></script>
-    <script src="js/carousel.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/contact.js"></script>
     <script src="js/main.js"></script>
+    <!-- EmailJS SDK (configure credentials in js/contact.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </body>
 </html>
