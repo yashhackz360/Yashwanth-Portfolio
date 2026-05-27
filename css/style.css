@@ -345,6 +345,11 @@ header.scrolled {
     color: #fff;
 }
 
+/* Hide site name on very small screens to prevent nav overflow */
+@media (max-width: 479px) {
+    .logo-site-name { display: none; }
+}
+
 @media (max-width: 480px) {
     .logo-site-name { max-width: 130px; font-size: 0.7rem; }
 }
@@ -631,8 +636,13 @@ header.scrolled {
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2.5rem;
+        gap: 1.5rem;
+        padding-block: 1.5rem 4rem;
     }
+}
+
+@media (max-width: 480px) {
+    .hero-grid { gap: 1rem; padding-block: 1rem 3.5rem; }
 }
 
 /* Hero text */
@@ -656,6 +666,14 @@ header.scrolled {
     margin-bottom: 1rem;
     perspective: 1000px;
     letter-spacing: -0.03em;
+}
+
+@media (max-width: 480px) {
+    .hero-name { font-size: clamp(2rem, 11vw, 3.2rem); letter-spacing: -0.02em; }
+}
+
+@media (max-width: 360px) {
+    .hero-name { font-size: clamp(1.75rem, 10vw, 2.5rem); }
 }
 
 .name-part {
@@ -746,6 +764,8 @@ header.scrolled {
         flex-direction: column;
         width: 100%;
         max-width: 280px;
+        align-self: center;
+        margin-inline: auto;
     }
 }
 
@@ -867,6 +887,8 @@ header.scrolled {
     animation: scrollBounce 2.5s ease-in-out infinite;
     z-index: 5;
 }
+
+@media (max-width: 600px) { .scroll-down-indicator { display: none; } }
 
 .scroll-down-indicator:hover { opacity: 1; }
 
@@ -2228,18 +2250,32 @@ footer p {
     animation: fadeInUp 0.65s 1.25s ease forwards;
 }
 
+/* Centre pills on mobile (parent .hero-text already centres items at ≤900px) */
+@media (max-width: 900px) {
+    .hero-specialization { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+    .hero-specialization { gap: 0.4rem; margin-bottom: 0.75rem; }
+    .spec-dot { display: none; } /* hide dot when pills stack */
+}
+
 .spec-pill {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     padding: 0.3rem 0.9rem;
     border-radius: 999px;
-    font-size: clamp(0.72rem, 1.3vw, 0.85rem);
+    font-size: clamp(0.68rem, 1.3vw, 0.85rem);
     font-weight: 600;
     letter-spacing: 0.03em;
     border: 1px solid;
     white-space: nowrap;
     transition: filter var(--t-base), transform var(--t-base);
+}
+
+@media (max-width: 380px) {
+    .spec-pill { padding: 0.25rem 0.65rem; font-size: 0.67rem; }
 }
 
 .spec-pill:hover {
