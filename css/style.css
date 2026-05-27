@@ -89,7 +89,7 @@
     --font-btn:  clamp(0.9rem, 1.4vw, 1rem);
 
     /* Header */
-    --header-h: 72px;
+    --header-h: 80px;
 }
 
 /* ============================================================
@@ -325,13 +325,33 @@ header.scrolled {
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #fff 0%, #38bdf8 40%, #a78bfa 70%, #fff 100%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: logoShimmer 4s linear infinite;
 }
 
-.logo-accent { -webkit-text-fill-color: var(--accent); }
+.logo-accent {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-left: 1px;
+    color: #38bdf8;
+    -webkit-text-fill-color: #38bdf8;
+    text-shadow: 0 0 12px rgba(56,189,248,0.7), 0 0 28px rgba(56,189,248,0.35);
+    animation: dotPulse 2.5s ease-in-out infinite;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Logo hover effects */
+.logo:hover .logo-text  { animation-duration: 1.8s; }
+.logo:hover .logo-accent { transform: scale(1.15); }
 
 /* Nav links */
 .nav-links {
@@ -340,11 +360,12 @@ header.scrolled {
 }
 
 .nav-link {
-    font-size: var(--font-sm);
-    font-weight: 500;
+    font-size: clamp(0.875rem, 1.4vw, 1.05rem);
+    font-weight: 600;
     color: rgba(255,255,255,0.72);
-    padding: 6px 12px;
+    padding: 8px 18px;
     border-radius: var(--radius-full);
+    letter-spacing: 0.04em;
     transition: color var(--t-base), background var(--t-base);
     position: relative;
 }

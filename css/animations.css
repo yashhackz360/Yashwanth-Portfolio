@@ -136,3 +136,25 @@
 @keyframes arcFill {
     to { stroke-dashoffset: var(--arc-end, 0); }
 }
+
+/* Nav logo shimmer (logo text) */
+@keyframes logoShimmer {
+    from { background-position: 0% center; }
+    to   { background-position: 200% center; }
+}
+
+/* Nav logo dot pulse (accent dot glow) */
+@keyframes dotPulse {
+    0%, 100% { text-shadow: 0 0 12px rgba(56,189,248,0.7),  0 0 28px rgba(56,189,248,0.35); }
+    50%       { text-shadow: 0 0 20px rgba(56,189,248,1.0),  0 0 45px rgba(56,189,248,0.6);  }
+}
+
+/* Reduced motion — disable logo animations */
+@media (prefers-reduced-motion: reduce) {
+    .logo-text {
+        animation: none;
+        background: #fff;
+        -webkit-text-fill-color: #fff;
+    }
+    .logo-accent { animation: none; }
+}
