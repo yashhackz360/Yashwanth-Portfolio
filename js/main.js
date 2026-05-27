@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const greetingEl = document.querySelector('.greeting-text');
     if (greetingEl) {
         greetingEl.textContent = '';
-        const text   = 'Hi, I am';
+        const text   = 'Hi, Myself';
         let   i      = 0;
         const type   = () => {
             if (i < text.length) {
