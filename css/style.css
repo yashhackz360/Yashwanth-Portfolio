@@ -296,29 +296,54 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: var(--radius-sm);
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-    color: #fff;
-    font-size: 0.8rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, rgba(56,189,248,0.25), rgba(167,139,250,0.12) 70%);
+    border: 1.5px solid rgba(56,189,248,0.4);
+    box-shadow: 0 0 10px rgba(56,189,248,0.25), inset 0 0 8px rgba(167,139,250,0.1);
     flex-shrink: 0;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+.logo-star-icon {
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, #fff 0%, #38bdf8 50%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: starSpin 8s linear infinite, starGlow 3s ease-in-out infinite alternate;
+    display: inline-block;
+    filter: drop-shadow(0 0 4px rgba(56,189,248,0.6));
+}
+
+.logo:hover .logo-mark {
+    box-shadow: 0 0 20px rgba(56,189,248,0.5), inset 0 0 12px rgba(167,139,250,0.2);
+    border-color: rgba(56,189,248,0.7);
+}
+
+.logo:hover .logo-star-icon { animation-duration: 2s, 1.2s; }
 
 .logo-site-name {
     font-size: 0.78rem;
     font-weight: 600;
     font-family: 'Courier New', 'Consolas', monospace;
-    color: rgba(var(--accent-rgb), 0.75);
-    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.82);
+    letter-spacing: 0.05em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 220px;
-    transition: color var(--t-base);
+    animation: starlightEmit 5s ease-in-out infinite;
+    animation-delay: 2s;
+    position: relative;
 }
 
-.logo:hover .logo-site-name { color: var(--accent); }
+.logo:hover .logo-site-name {
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    color: #fff;
+}
 
 @media (max-width: 480px) {
     .logo-site-name { max-width: 130px; font-size: 0.7rem; }
